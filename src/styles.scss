@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+// Font
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+// Colors
+$primary: #c167ef;
+$secondary: #10bcee;
+$dark: #2b3041;
+$light: #f3f6f9;
+
+// Navbar
+$navbar-padding-y: 1rem;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: $secondary;
+
+// Buttons
+$button-radius: 50px;
+$button-padding-x: 30px;
+$button-padding-y: 10px;
+
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+$btn-padding-x: $button-padding-x;
+$btn-padding-x-sm: $button-padding-x;
+$btn-padding-x-lg: $button-padding-x;
+$btn-padding-y: $button-padding-y;
+$btn-padding-y-sm: $button-padding-y;
+$btn-padding-y-lg: $button-padding-y;
+$navbar-toggler-border-radius: 5px;
+
+// Spacers
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 12
+) !default;
+
+$line-height-base: 1.7;
+$headings-margin-bottom: $spacer * 1;
+
+$enable-negative-margins: true;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar .btn-outline-light:hover {
+  color: var(--bs-dark);
+}
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-sticky {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  background: url("./assets/images/header-background.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.modal-dialog {
+  max-width: 1040px;
+}
+
+.list-group-item i.fas {
+  margin-right: 0.25rem; /* Adjust as needed */
+}
+
+.download {
+  background: url("./assets/images/download-background.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    background: var(--bs-dark);
+  }
+
+  .hero .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .text-container {
+    text-align: center;
+  }
+}
